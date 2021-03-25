@@ -1,5 +1,5 @@
 .is-scrollable{
-    height: 400px;
+    height: 600px;
     overflow-y: auto;
     flex-direction: column;
 }
