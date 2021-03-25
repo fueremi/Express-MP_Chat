@@ -22,7 +22,7 @@
         <div class="container">
           <div class="columns is-centered">
             <div class="column is-5-tablet is-10-desktop is-10-widescreen">
-              <form action="" class="box">
+              <section class="box">
                 <!-- Start of navbar -->
                 <nav
                   class="navbar"
@@ -82,156 +82,6 @@
 
                   <!-- Start of Chat -->
                   <div class="column is-scrollable">
-                    <div class="box has-background-primary has-text-white">
-                      <article class="media">
-                        <figure class="media-left">
-                          <p class="image is-64x64">
-                            <img
-                              src="https://bulma.io/images/placeholders/128x128.png"
-                            />
-                          </p>
-                        </figure>
-                        <div class="media-content">
-                          <div class="content">
-                              <strong>John Smith</strong>
-                              <small>@johnsmith</small>
-                              <small>31m</small>
-                              <br />
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Proin ornare magna eros, eu pellentesque
-                              tortor vestibulum ut. Maecenas non massa sem. Etiam
-                              finibus odio quis feugiat facilisis.
-                            </p>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-
-                    <div class="box is-primary">
-                      <article class="media">
-                        <figure class="media-left">
-                          <p class="image is-64x64">
-                            <img
-                              src="https://bulma.io/images/placeholders/128x128.png"
-                            />
-                          </p>
-                        </figure>
-                        <div class="media-content">
-                          <div class="content   ">
-                              <strong>John Smith</strong>
-                              <small>@johnsmith</small>
-                              <small>31m</small>
-                              <br />
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Proin ornare magna eros, eu pellentesque
-                              tortor vestibulum ut. Maecenas non massa sem. Etiam
-                              finibus odio quis feugiat facilisis.
-                            </p>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-
-                    <div class="box is-primary">
-                      <article class="media">
-                        <figure class="media-left">
-                          <p class="image is-64x64">
-                            <img
-                              src="https://bulma.io/images/placeholders/128x128.png"
-                            />
-                          </p>
-                        </figure>
-                        <div class="media-content">
-                          <div class="content   ">
-                              <strong>John Smith</strong>
-                              <small>@johnsmith</small>
-                              <small>31m</small>
-                              <br />
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Proin ornare magna eros, eu pellentesque
-                              tortor vestibulum ut. Maecenas non massa sem. Etiam
-                              finibus odio quis feugiat facilisis.
-                            </p>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-
-                    <div class="box is-primary">
-                      <article class="media">
-                        <figure class="media-left">
-                          <p class="image is-64x64">
-                            <img
-                              src="https://bulma.io/images/placeholders/128x128.png"
-                            />
-                          </p>
-                        </figure>
-                        <div class="media-content">
-                          <div class="content   ">
-                              <strong>John Smith</strong>
-                              <small>@johnsmith</small>
-                              <small>31m</small>
-                              <br />
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Proin ornare magna eros, eu pellentesque
-                              tortor vestibulum ut. Maecenas non massa sem. Etiam
-                              finibus odio quis feugiat facilisis.
-                            </p>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-
-                    <div class="box is-primary">
-                      <article class="media">
-                        <figure class="media-left">
-                          <p class="image is-64x64">
-                            <img
-                              src="https://bulma.io/images/placeholders/128x128.png"
-                            />
-                          </p>
-                        </figure>
-                        <div class="media-content">
-                          <div class="content   ">
-                              <strong>John Smith</strong>
-                              <small>@johnsmith</small>
-                              <small>31m</small>
-                              <br />
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Proin ornare magna eros, eu pellentesque
-                              tortor vestibulum ut. Maecenas non massa sem. Etiam
-                              finibus odio quis feugiat facilisis.
-                            </p>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-
-                    <div class="box is-primary">
-                      <article class="media">
-                        <figure class="media-left">
-                          <p class="image is-64x64">
-                            <img
-                              src="https://bulma.io/images/placeholders/128x128.png"
-                            />
-                          </p>
-                        </figure>
-                        <div class="media-content">
-                          <div class="content   ">
-                              <strong>John Smith</strong>
-                              <small>@johnsmith</small>
-                              <small>31m</small>
-                              <br />
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Proin ornare magna eros, eu pellentesque
-                              tortor vestibulum ut. Maecenas non massa sem. Etiam
-                              finibus odio quis feugiat facilisis.
-                            </p>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-
                   </div>
 
                 </div>
@@ -239,9 +89,10 @@
                   <!-- End of chat -->
                   
                   <!-- Start of send message -->
+                  <form id="chat-form">
                   <div class="field has-addons">
                     <div class="control is-expanded">
-                      <input class="input is-primary" type="text" placeholder="Enter message">
+                      <input id="msg" class="input is-primary" type="text" placeholder="Enter message">
                     </div>
                     <div class="control">
                       <button class="button is-primary">
@@ -252,9 +103,10 @@
                       </button>
                     </div>
                   </div>
+                  </form>
                   <!-- End of send message -->
                 </div>
-              </form>
+              </section>
             </div>
           </div>
         </div>
@@ -262,6 +114,7 @@
     </section>
 
     <!-- Javascript -->
+    <script src="/socket.io/socket.io.js"></script>
     <script src="./js/main.js"></script>
     <!-- End of javascript -->
   </body>
