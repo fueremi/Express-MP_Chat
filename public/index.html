@@ -32,6 +32,8 @@
                       type="text"
                       placeholder="e.g. bobsmith"
                       class="input is-primary"
+                      name="username"
+                      id="username"
                     />
                     <span class="icon is-small is-left">
                       <i class="fa fa-user"></i>
@@ -42,9 +44,13 @@
                   <label for="" class="label">Chat Room</label>
                   <div class="control has-icons-left">
                     <div class="select is-primary is-fullwidth">
-                      <select>
-                        <option>Select dropdown</option>
-                        <option>With options</option>
+                      <select name="chatRoom" id="chatRoom">
+                        <option value="">Select Room :</option>
+                        <option value="php">PHP</option>
+                        <option value="javascript">Javascript</option>
+                        <option value="swift">Swift</option>
+                        <option value="java">Java</option>
+                        <option value="python">Python</option>
                       </select>
                     </div>
                     <span class="icon is-small is-left">

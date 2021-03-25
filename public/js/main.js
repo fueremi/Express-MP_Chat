@@ -27,10 +27,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const chatForm = document.getElementById('chat-form');
   const socket = io();
   const chatMessages = document.querySelector('.is-scrollable');
+  const roomName = document.getElementById('room-name');
+  const userList = document.getElementById('user');
+
+  // Get username and room from
+  const {username, chatRoom} = Qs.parse(location.search, {
+    ignoreQueryPrefix: true
+  });
+
+  // Join chatroom
+  socket.emit('joinRoom', { username, chatRoom });
 
   // Message from server
   socket.on('message', message => {
-    console.log(message);
     outputMessage(message);
 
     // Scroll down
@@ -58,23 +67,33 @@ document.addEventListener('DOMContentLoaded', () => {
     div.classList.add('box');
     div.classList.add('is-primary');
     div.innerHTML = `<article class="media">
-    <figure class="media-left">
-      <p class="image is-64x64">
-        <img
-          src="https://bulma.io/images/placeholders/128x128.png"
-        />
-      </p>
-    </figure>
     <div class="media-content">
       <div class="content   ">
-          <strong>John Smith</strong>
-          <small>@johnsmith</small>
-          <small>31m</small>
+          <strong></strong>
+          <small>@${message.username}</small>
+          <small>${message.time}</small>
           <br />
-          ${message}
+          ${message.text}
         </p>
       </div>
     </div>
   </article>`;
   document.querySelector('.is-scrollable').appendChild(div);
+  }
+
+  // Get room and users
+  socket.on('roomUsers', ({ chatRoom, users }) => {
+    outputRoomName(chatRoom);
+    outputUsers(users);
+  })
+
+  // Add room name to DOM
+  function outputRoomName(chatRoom){
+    roomName.innerText = chatRoom;
+  }
+
+  function outputUsers(users){
+    userList.innerHTML = `
+      ${users.map(user => `<li><a class="is-capitalized">${user.username}</a</li>`).join('')}
+    `;
   }

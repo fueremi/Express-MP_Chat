@@ -15,6 +15,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./static/logo.png" type="image/x-icon">
   </head>
   <body>
     <section class="hero is-primary is-fullheight">
@@ -32,7 +33,7 @@
                   <div class="navbar-brand">
                     <a class="navbar-item" href="#">
                       <img
-                        src="/static/logo.png"
+                        src="./static/logo.png"
                       />
                     </a>
 
@@ -53,7 +54,7 @@
                     <div class="navbar-end">
                       <div class="navbar-item">
                         <div class="buttons">
-                          <a class="button is-white"> Leave Room </a>
+                          <a href="/" class="button is-white"> Leave Room </a>
                         </div>
                       </div>
                     </div>
@@ -65,16 +66,12 @@
                   <!-- Start of Menu -->
                   <div class="column is-3">
                     <aside class="menu">
-                      <p class="menu-label">General</p>
+                      <p class="menu-label">Room</p>
                       <ul class="menu-list">
-                        <li><a>Dashboard</a></li>
-                        <li><a>Customers</a></li>
+                        <li><a id="room-name" class="is-capitalized"></a></li>
                       </ul>
-                      <p class="menu-label">Transactions</p>
-                      <ul class="menu-list">
-                        <li><a>Payments</a></li>
-                        <li><a>Transfers</a></li>
-                        <li><a>Balance</a></li>
+                      <p class="menu-label">User</p>
+                      <ul class="menu-list" id="user">
                       </ul>
                     </aside>
                   </div>
@@ -114,6 +111,7 @@
     </section>
 
     <!-- Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="./js/main.js"></script>
     <!-- End of javascript -->
